@@ -6,6 +6,10 @@
 </head>
 <body>
 <h1>Movies</h1>
+
+//if there are no movies
+<p th:unless="${movies} and ${movies.size()}">No Movies!</p>
+
 <ul>
     <th:block th:each="movie : ${movies}">
         <li th:text="${movie}"></li>
