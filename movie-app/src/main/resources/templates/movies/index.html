@@ -8,10 +8,16 @@
 
 <p th:unless="${movies} and ${movies.size()}">No Movies!</p>
 
-<ul>
-    <th:block th:each="movie : ${movies}">
-        <li th:text="${movie}"></li>
-    </th:block>
-</ul>
+<table class="table table-dark table-striped">
+    <head>
+        <tr>
+            <th>Title</th>
+        </tr>
+    </head>
+    <tr th:each="movie : ${movies}">
+        <td th:text="${movie}"></td>
+    </tr>
+</table>
+
 </body>
 </html>
